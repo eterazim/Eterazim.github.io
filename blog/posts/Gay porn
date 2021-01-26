@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>CapitolRaid.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <div id="header">
+    <div id="headerContent">
+      <p id="title">the blog of the peoples who did the capitol raid</p>
+      <p>you know, the domestic terrorist attack</p>
+    </div>
+    <div class="fancyLine"></div>
+  </div>
+
+  <div id="content">
+    <!-- CONTENT HERE -->
+
+    <div class="postView">
+      <img id="thumbnail" src="hell.png" style="object-position: 100% 10%;">
+      <p id="author">Sex man</p>
+      <p id="title">Gay sex guy</p>
+      <p id="about">Posted 1/25/21</p>
+      <p id="postText">Gay sex is cool and I want it haha jk unless?</p>
+    </div>
+    <div id=postEnd>
+      <p>That's the end of the article. Hope you hated it.</p>
+      <a id="backLink" href="../index.html">Go back to the other posts</a>
+    </div>
+
+
+  <div id="footer">
+    <div class="fancyLine"></div>
+    <div id="footerContent">
+      <p>in every way affiliated with the terrorits who raided the capitolah plese stormm the whitee hoose MAGA!</p>
+    </div>
+  </div>
+</body>
+</html>
