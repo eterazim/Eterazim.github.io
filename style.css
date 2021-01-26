@@ -27,6 +27,7 @@ body {
   margin: 0px;
   margin-top: 72px;
   margin-bottom: 42px;
+  height: calc( 100% - 42px - 72px );
 }
 .image {
   height: 200px;
