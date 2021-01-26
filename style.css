@@ -106,7 +106,7 @@ p {
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
-  overflow: auto
+  overflow: auto;
 }
 .post #author {
   font-size: 16px;
@@ -139,6 +139,7 @@ p {
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
+  overflow: auto;
 }
 .postView #author {
   font-size: 16px;
@@ -157,6 +158,15 @@ p {
   margin-bottom: 5px;
   font-size: 12px;
   color: grey;
+}
+.postView #thumbnail {
+  width: 120px;
+  height: 120px;
+  margin-left: 6px;
+  margin-bottom: 6px;
+  object-fit: cover;
+  border-radius: 16px;
+  float: right;
 }
 .postView #divider {
   white-space: pre;
