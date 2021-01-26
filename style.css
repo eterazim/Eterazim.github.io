@@ -20,14 +20,8 @@ a:active {
   text-decoration: none;
 }
 body {
-  animation: bgAnim;
-  background-color: grey;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
+  background-color: #18171c;
   margin: 0px;
-  margin-top: 72px;
-  margin-bottom: 42px;
-  height: calc( 100% - 42px - 72px );
 }
 .image {
   height: 200px;
@@ -35,19 +29,6 @@ body {
 }
 .image:hover {
   transform: translate(10px, 20px);
-}
-#footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: black;
-  color: white;
-  width: calc(100% - 20px);
-  height: 20px;
-  padding: 10px;
-}
-#footer p {
-  margin: 0px;
 }
 @keyframes arrowAnim {
   0% {
@@ -73,17 +54,42 @@ body {
   animation-iteration-count: infinite;
 }
 #header {
-  position: absolute;
-  left: 0;
-  top: 0;
+  background: black;
+  color: white;
+  width: 100%;
+  padding: 0px;
+}
+#headerContent {
   background: black;
   color: white;
   width: calc(100% - 20px);
-  height: 50px;
   padding: 10px;
 }
 #header #title {
   font-size: 30px;
+}
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background: black;
+  color: white;
+}
+#footerContent {
+  background: black;
+  color: white;
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.fancyLine {
+  background-color: grey;
+  margin: 0px;
+  height: 2px;
+  width: 100%;
+  animation: bgAnim;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
 }
 p {
   margin: 0px;
@@ -92,8 +98,6 @@ p {
   background-color: #18171c;
   color: white;
   padding: 6px;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
   overflow-x: hidden;
   overflow-y: auto;
 }
