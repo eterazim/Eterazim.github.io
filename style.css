@@ -1,0 +1,170 @@
+@keyframes bgAnim {
+  0% {background-color: grey;}
+  50% {background-color: purple;}
+  0% {background-color: grey;}
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+  text-decoration: none;
+}
+body {
+  animation: bgAnim;
+  background-color: grey;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  margin: 0px;
+  margin-top: 72px;
+  margin-bottom: 42px;
+}
+.image {
+  height: 200px;
+  transition: transform 0.2s;
+}
+.image:hover {
+  transform: translate(10px, 20px);
+}
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: black;
+  color: white;
+  width: calc(100% - 20px);
+  height: 20px;
+  padding: 10px;
+}
+#footer p {
+  margin: 0px;
+}
+@keyframes arrowAnim {
+  0% {
+    transform: rotate(0deg) scaleY(1.2);
+    bottom: 120px;
+  }
+  50% {
+    transform: rotate(10deg) scaleY(0.8);
+    bottom: 80px;
+  }
+  100% {
+    transform: rotate(0deg) scaleY(1.2);
+    bottom: 120px;
+  }
+}
+#arrow {
+  position: fixed;
+  height: 100px;
+  bottom: calc(100% - 20px);
+  left: 50px;
+  animation: arrowAnim;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: black;
+  color: white;
+  width: calc(100% - 20px);
+  height: 50px;
+  padding: 10px;
+}
+#header #title {
+  font-size: 30px;
+}
+p {
+  margin: 0px;
+}
+#content {
+  background-color: #18171c;
+  color: white;
+  padding: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.post {
+  background-color: black;
+  padding: 6px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow: auto
+}
+.post #author {
+  font-size: 16px;
+}
+.post #title {
+  font-size: 22px;
+}
+.post #desc {
+  font-size: 15px;
+  color: lightgrey;
+}
+.post #about {
+  margin-top: 5px;
+  font-size: 12px;
+  color: grey;
+}
+.post #thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 16px;
+  float: right;
+}
+.post #divider {
+  white-space: pre;
+  font-size: 6px;
+}
+.postView {
+  background-color: black;
+  padding: 6px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.postView #author {
+  font-size: 16px;
+}
+.postView #title {
+  font-size: 22px;
+}
+.postView #postText {
+  white-space: pre-wrap;
+  font-size: 15px;
+  color: lightgrey;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.postView #about {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: grey;
+}
+.postView #divider {
+  white-space: pre;
+  font-size: 6px;
+}
+#postEnd {
+  background-color: black;
+  padding: 6px;
+  border-radius: 8px;
+  color: lightgrey;
+  font-size: 12px;
+}
+#backLink {
+  text-decoration: underline;
+  font-size: 16px;
+}
