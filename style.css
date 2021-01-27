@@ -1,7 +1,7 @@
 @keyframes bgAnim {
-  0% {background-color: white;}
-  50% {background-color: yellow;}
-  100% {background-color: pink;}
+  0% {background-color: yellow;}
+  50% {background-color: grey;}
+  100% {background-color: yellow;}
 }
 a:link {
   color: white;
@@ -79,7 +79,7 @@ p {
   overflow-y: auto;
 }
 .post {
-  background-color: yellow;
+  background-color: black;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
@@ -112,7 +112,7 @@ p {
   font-size: 6px;
 }
 .postView {
-  background-color: yellow;
+  background-color: black;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
