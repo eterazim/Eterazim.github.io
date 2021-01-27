@@ -1,7 +1,7 @@
 @keyframes bgAnim {
-  0% {background-color: yellow;}
-  50% {background-color: grey;}
-  100% {background-color: yellow;}
+  0% {background-color: white;}
+  50% {background-color: yellow;}
+  100% {background-color: pink;}
 }
 a:link {
   color: white;
@@ -79,7 +79,7 @@ p {
   overflow-y: auto;
 }
 .post {
-  background-color: black;
+  background-color: white;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
@@ -87,18 +87,20 @@ p {
 }
 .post #author {
   font-size: 16px;
+  color: yellow;
 }
 .post #title {
   font-size: 22px;
+    color: yellow;
 }
 .post #desc {
   font-size: 15px;
-  color: lightgrey;
+  color: yellow;
 }
 .post #about {
   margin-top: 5px;
   font-size: 12px;
-  color: grey;
+  color: yellow;
 }
 .post #thumbnail {
   width: 80px;
@@ -112,7 +114,7 @@ p {
   font-size: 6px;
 }
 .postView {
-  background-color: black;
+  background-color: white;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
@@ -120,21 +122,23 @@ p {
 }
 .postView #author {
   font-size: 16px;
+    color: yellow;
 }
 .postView #title {
   font-size: 22px;
+    color: yellow;
 }
 .postView #postText {
   white-space: pre-wrap;
   font-size: 15px;
-  color: lightgrey;
+  color: yellow;
   margin-left: 6px;
   margin-right: 6px;
 }
 .postView #about {
   margin-bottom: 5px;
   font-size: 12px;
-  color: grey;
+  color: yellow;
 }
 .postView #thumbnail {
   width: 120px;
