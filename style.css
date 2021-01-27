@@ -1,6 +1,6 @@
 @keyframes bgAnim {
   0% {background-color: white;}
-  50% {background-color: yellow;}
+  50% {background-color: pink;}
   100% {background-color: pink;}
 }
 a:link {
