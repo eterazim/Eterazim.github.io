@@ -1,27 +1,27 @@
-@keyframes bgAnim {
-  0% {background-color: grey;}
-  50% {background-color: purple;}
-  100% {background-color: grey;}
-}
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Crete+Round:ital@0;1&family=Crimson+Text&family=Playfair+Display:ital,wght@1,700&display=swap');
+
 a:link {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 a:visited {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 a:hover {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 a:active {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 body {
-  background-color: #18171c;
+  background-color: rgb(200, 200, 200);
   margin: 0px;
+  margin-bottom: 80px;
+  overflow-x: hidden;
+  font-family: 'Crete Round', serif;
 }
 .image {
   height: 200px;
@@ -32,18 +32,25 @@ body {
 }
 #header {
   background: black;
-  color: white;
+  color: rgb(107, 199, 103);
   width: 100%;
   padding: 0px;
 }
 #headerContent {
-  background: black;
-  color: white;
+  background: white;
+  font-family: 'Crete Round';
   width: calc(100% - 20px);
   padding: 10px;
 }
-#header #title {
+#headerContent #title {
+  font-family: 'Crete Round';
+  color: rgb(38, 130, 34);
   font-size: 30px;
+  line-height: 35px;
+}
+#headerContent #motto {
+  font-family: 'Crete Round';
+  color: rgb(46, 46, 46);
 }
 #footer {
   position: fixed;
@@ -54,46 +61,49 @@ body {
   color: white;
 }
 #footerContent {
-  background: black;
-  color: white;
+  background: white;
+  color: rgb(46, 46, 46);
+  font-family: 'Crete Round';
   width: calc(100% - 20px);
   padding: 10px;
 }
 .fancyLine {
-  background-color: grey;
+  background-color: rgb(29, 145, 25);
   margin: 0px;
   height: 2px;
   width: 100%;
-  animation: bgAnim;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
 }
 p {
   margin: 0px;
+  padding: 0px;
 }
 #content {
-  background-color: #18171c;
-  color: white;
   padding: 6px;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 .post {
-  background-color: black;
+  background-color: white;
+  color: black;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
   overflow: auto;
+  border: 0px solid rgba(38, 130, 34, 1);
+  transition: border-width 0.1s;
+}
+.post:hover {
+  border-width: 4px;
 }
 .post #author {
   font-size: 16px;
 }
 .post #title {
   font-size: 22px;
+  color: rgb(22, 89, 19);
+  margin-bottom: 4px;
 }
 .post #desc {
   font-size: 15px;
-  color: lightgrey;
+  color: rgb(46, 46, 46);
 }
 .post #about {
   margin-top: 5px;
@@ -112,7 +122,8 @@ p {
   font-size: 6px;
 }
 .postView {
-  background-color: black;
+  background-color: white;
+  color: black;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
@@ -123,12 +134,12 @@ p {
 }
 .postView #title {
   font-size: 22px;
+  color: rgb(22, 89, 19);
 }
 .postView #postText {
   white-space: pre-wrap;
   font-size: 15px;
-  color: lightgrey;
-  margin-left: 6px;
+  color: rgb(46, 46, 46);
   margin-right: 6px;
 }
 .postView #about {
@@ -142,21 +153,23 @@ p {
   margin-left: 6px;
   margin-bottom: 6px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 8px;
   float: right;
 }
 .postView #divider {
   white-space: pre;
   font-size: 6px;
 }
-#postEnd {
-  background-color: black;
+.fakePost {
+  background-color: white;
+  color: black;
   padding: 6px;
   border-radius: 8px;
-  color: lightgrey;
-  font-size: 12px;
+  margin-bottom: 8px;
+  overflow: auto;
+  border: 0px solid rgba(38, 130, 34, 1);
 }
-#backLink {
-  text-decoration: underline;
-  font-size: 16px;
+.fakePost #small {
+  color: black;
+  font-size: 12px;
 }
