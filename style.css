@@ -42,13 +42,13 @@ body {
   width: calc(100% - 20px);
   padding: 10px;
 }
-#headerContent #title {
+#headerContent #siteTitle {
   font-family: 'Crete Round';
   color: rgb(38, 130, 34);
   font-size: 30px;
   line-height: 35px;
 }
-#headerContent #motto {
+#headerContent #siteMotto {
   font-family: 'Crete Round';
   color: rgb(46, 46, 46);
 }
@@ -97,6 +97,11 @@ p {
   font-size: 16px;
 }
 .post #title {
+  font-size: 22px;
+  color: rgb(22, 89, 19);
+  margin-bottom: 4px;
+}
+#postTitle {
   font-size: 22px;
   color: rgb(22, 89, 19);
   margin-bottom: 4px;
