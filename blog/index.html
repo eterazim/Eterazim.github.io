@@ -80,7 +80,7 @@
     const urlParams = new URLSearchParams(queryString)
     const fileName = urlParams.get('p')
 
-    if (fileName!=null&&fileName!=undefined) {
+    if (fileName!=null&&fileName!=undefined) { // individual article code
       $.getJSON( "https://capitolraid.org/blog/posts/"+fileName, function( data ) {
         //console.log(data)
 
@@ -102,22 +102,9 @@
         }
 
       })
-    }else{
+    }else{ // article list code
       $( ".postView" ).remove();
       $( ".fakePost" ).remove();
-
-      /*
-      <a href="posts/terrorist.html">
-        <div class="post">
-          <img id="thumbnail" src="posts/terrorist.jpg">
-          <p id="author">Post by Idiot 420</p>
-          <p id="title">Haha this idiot wants me to call them a terrorist</p>
-          <p id="desc">Idiot terrorist</p>
-          <p id="about">Posted 1/27/21</p>
-        </div>
-      </a>
-      */
-      let dick = "test lol"
 
 
       //"posts/"+postEntries
@@ -131,7 +118,7 @@
           $( `#aL_${itemNumber}` ).append( `<div class="post" id="dP_${itemNumber}"></div>` )
           $.getJSON( "https://capitolraid.org/blog/posts/"+entries.json[i], function( data ) {
             $( `#dP_${itemNumber}` ).append( `<img id="thumbnail" id="pThumb_${itemNumber}" src="posts/${data.thumbnailURL}">` )
-            $( `#dP_${itemNumber}` ).append( `<p id="author" id="pAuth_${itemNumber}">${data.author}</p>` )
+            $( `#dP_${itemNumber}` ).append( `<p id="author" id="pAuth_${itemNumber}">Post by ${data.author}</p>` )
             $( `#dP_${itemNumber}` ).append( `<p id="title" id="pTitle_${itemNumber}">${data.title}</p>` )
             $( `#dP_${itemNumber}` ).append( `<p id="desc" id="pDesc_${itemNumber}">${data.desc}</p>` )
             $( `#dP_${itemNumber}` ).append( `<p id="about" id="pAbout_${itemNumber}">Posted ${data.dateCreated}</p>` )
