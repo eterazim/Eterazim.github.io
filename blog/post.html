@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>CapitolRaid.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../libraries/jquery.min.js"></script>
+</head>
+<body>
+  <div id="header">
+    <div id="headerContent">
+      <p id="siteTitle">the blog of the peoples who did the capitol raid</p>
+      <p id="siteMotto">expiremental post viewer</p>
+    </div>
+    <div class="fancyLine"></div>
+  </div>
+
+  <div id="content">
+    <!-- CONTENT HERE -->
+
+    <div class="postView">
+      <img id="thumbnail" src="thumb-dog-shit.jpg">
+      <p id="author">Author</p>
+      <p id="title">Title</p>
+      <p id="about">Posted DATE</p>
+      <p id="postText">Your article is loading. This requires JavaScript, so if that is disabled you must enable it on this site.</p>
+    </div>
+
+    <div class="fakePost">
+      <p id="small">That's the end of the article. Hope you hated it.</p>
+      <a href="../index.html">Go back to the other posts</a>
+    </div>
+
+
+    <div id="footer">
+      <div class="fancyLine"></div>
+      <div id="footerContent">
+        <p>TERRORISM IS SO FUCKING FUNNY!</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    $.getJSON( "post/dog-shit.json", function( data ) {
+      var items = [];
+      $.each( data, function( key, val ) {
+        items.push( "<li id='" + key + "'>" + val + "</li>" );
+      });
+
+      $( "<ul/>", {
+        "class": "my-new-list",
+        html: items.join( "" )
+      }).appendTo( "body" );
+    });
+
+    document.getElementById("author").innerHTML = "post.author"
+    document.getElementById("title").innerHTML = "Dog Shit"
+    document.getElementById("about").innerHTML = "Posted 1/27/21"
+    document.getElementById("postText").innerHTML = "YO MAMA!"
+    //https://images.unsplash.com/photo-1597843797221-e34b4a320b97?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c29ja3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80
+    document.getElementById("thumbnail").src = "https://images.unsplash.com/photo-1597843797221-e34b4a320b97?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c29ja3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80";
+  </script>
+</body>
+</html>
