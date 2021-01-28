@@ -95,28 +95,28 @@ p {
 }
 .post #author {
   font-size: 16px;
+  color: yellow;
 }
 .post #title {
   font-size: 22px;
-  color: rgb(22, 89, 19);
+  color: yellow;
   margin-bottom: 4px;
 }
 #postTitle {
   font-size: 22px;
-  color: rgb(22, 89, 19);
+  color: yellow;
   margin-bottom: 4px;
 }
 .post #desc {
   font-size: 15px;
-  color: rgb(46, 46, 46);
+  color: yellow;
 }
 .post #about {
   margin-top: 5px;
   font-size: 12px;
-  color: grey;
+  color: yellow;
 }
 .post #thumbnail {
-  width: 80px;
   height: 80px;
   object-fit: cover;
   border-radius: 16px;
@@ -136,30 +136,30 @@ p {
 }
 .postView #author {
   font-size: 16px;
+  color: yellow;
 }
 .postView #title {
   font-size: 22px;
-  color: rgb(22, 89, 19);
+  color: yellow;
 }
 .postView #postText {
   white-space: pre-wrap;
   font-size: 15px;
-  color: rgb(46, 46, 46);
+  color: yellow;
   margin-right: 6px;
 }
 .postView #about {
   margin-bottom: 5px;
   font-size: 12px;
-  color: grey;
+  color: yellow;
 }
 .postView #thumbnail {
-  width: 120px;
-  height: 120px;
-  margin-left: 6px;
-  margin-bottom: 6px;
+  height: 350px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   object-fit: cover;
   border-radius: 8px;
-  float: right;
 }
 .postView #divider {
   white-space: pre;
@@ -167,7 +167,7 @@ p {
 }
 .fakePost {
   background-color: white;
-  color: black;
+  color: yellow;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
