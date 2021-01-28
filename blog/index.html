@@ -9,7 +9,7 @@
   <div id="header">
     <div id="headerContent">
       <p id="siteTitle">the blog of the peoples who did the capitol raid</p>
-      <p id="siteMotto">experimental post viewer</p>
+      <p id="siteMotto">you know, the domestic terrorist attack</p>
     </div>
     <div class="fancyLine"></div>
   </div>
@@ -55,7 +55,7 @@
     const fileName = urlParams.get('p')
 
     if (fileName!=null&&fileName!=undefined) {
-      $.getJSON( "posts/"+fileName, function( data ) {
+      $.getJSON( "https://capitolraid.org/blog/posts/"+fileName, function( data ) {
         //console.log(data)
 
         if(data.author!=undefined) {
@@ -114,6 +114,8 @@
 
 
       })
+
+      $( "#content" ).append( `<div class="fakePost">More posts to come!</div>` )
     }
 
   </script>
