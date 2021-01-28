@@ -30,7 +30,9 @@
 <body>
   <div id="header">
     <div id="headerContent">
-      <p id="siteTitle">the blog of the peoples who did the capitol raid</p>
+      <a href="https://capitolraid.org/blog" id="linkTitle">
+        <p id="siteTitle">the blog of the peoples who did the capitol raid</p>
+      </a>
       <p id="siteMotto">you know, the domestic terrorist attack</p>
     </div>
     <div class="fancyLine"></div>
@@ -71,6 +73,8 @@
     console.log("THE URL IS "+url)
     //console.log(url.split('?')[0])
     document.getElementById("linkBack").href = url.split('?')[0]
+
+    document.getElementById("linkTitle").href = url.split('?')[0]
 
     // ?product=shirt&color=blue&newuser&size=m
     const urlParams = new URLSearchParams(queryString)
