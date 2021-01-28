@@ -18,11 +18,11 @@
     <!-- CONTENT HERE -->
 
     <div class="postView">
-      <img id="thumbnail" src="thumb-dog-shit.jpg">
+      <img id="thumbnail">
       <p id="author">Author</p>
       <p id="title">Title</p>
       <p id="about">Posted DATE</p>
-      <p id="postText">Your article is loading. This requires JavaScript, so if that is disabled you must enable it on this site.</p>
+      <p id="text">Your article is loading. This requires JavaScript, so if that is disabled you must enable it on this site.</p>
     </div>
 
     <div class="fakePost">
@@ -42,15 +42,29 @@
   <script>
 
     $.getJSON( "posts/dog-shit.json", function( data ) {
-      console.log(data);
-    });
+      //console.log(data)
 
-    document.getElementById("author").innerHTML = "post.author"
-    document.getElementById("title").innerHTML = "Dog Shit"
-    document.getElementById("about").innerHTML = "Posted 1/27/21"
-    document.getElementById("postText").innerHTML = "YO MAMA!"
-    //https://images.unsplash.com/photo-1597843797221-e34b4a320b97?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c29ja3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80
-    document.getElementById("thumbnail").src = "https://images.unsplash.com/photo-1597843797221-e34b4a320b97?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c29ja3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80";
+
+
+      if(data.author!=undefined) {
+        document.getElementById("author").innerHTML = data.author
+      }
+      if(data.title!=undefined) {
+        document.getElementById("title").innerHTML = data.title
+      }
+      if(data.dateCreated!=undefined) {
+        document.getElementById("about").innerHTML = "Posted "+data.dateCreated
+      }
+      if(data.content!=undefined) {
+        let text = data.content
+        document.getElementById("text").innerHTML = text.replace(new RegExp('\r?\n','g'), '<br>');
+      }
+      if(data.thumbnailURL!=undefined) {
+        document.getElementById("thumbnail").src = "posts/"+data.thumbnailURL
+      }
+
+    })
+
   </script>
 </body>
 </html>
