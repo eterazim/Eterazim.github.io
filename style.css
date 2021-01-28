@@ -95,21 +95,20 @@ p {
 }
 .post #author {
   font-size: 16px;
-  color: yellow;
 }
 .post #title {
   font-size: 22px;
-  color: yellow;
+  color: rgb(22, 89, 19);
   margin-bottom: 4px;
 }
 .post #desc {
   font-size: 15px;
-  color: yellow;
+  color: rgb(46, 46, 46);
 }
 .post #about {
   margin-top: 5px;
   font-size: 12px;
-  color: yellow;
+  color: grey;
 }
 .post #thumbnail {
   height: 80px;
@@ -131,22 +130,21 @@ p {
 }
 .postView #author {
   font-size: 16px;
-  color: yellow;
 }
 .postView #title {
   font-size: 22px;
-  color: yellow;
+  color: rgb(22, 89, 19);
 }
 .postView #postText {
   white-space: pre-wrap;
   font-size: 15px;
-  color: yellow;
+  color: rgb(46, 46, 46);
   margin-right: 6px;
 }
 .postView #about {
   margin-bottom: 5px;
   font-size: 12px;
-  color: yellow;
+  color: grey;
 }
 .postView #thumbnail {
   height: 350px;
@@ -162,7 +160,7 @@ p {
 }
 .fakePost {
   background-color: white;
-  color: yellow;
+  color: black;
   padding: 6px;
   border-radius: 8px;
   margin-bottom: 8px;
