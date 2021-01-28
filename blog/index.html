@@ -42,11 +42,11 @@
     <!-- CONTENT HERE -->
 
     <div class="postView">
-      <img id="thumbnail">
       <p id="author">Author</p>
       <p id="title">Title</p>
       <p id="about">Posted DATE</p>
       <p id="text">Your article is loading. This requires JavaScript, so if that is disabled you must enable it on this site.</p>
+      <img id="thumbnail">
     </div>
 
     <div class="fakePost">
@@ -106,6 +106,7 @@
       $( ".postView" ).remove();
       $( ".fakePost" ).remove();
 
+      let postElements = [];
 
       //"posts/"+postEntries
       $.getJSON( "https://capitolraid.org/blog/posts/postEntries.json", function( data ) {
@@ -114,19 +115,37 @@
 
         for (let i = 0; i < entries.json.length; i ++) {
           let itemNumber = i
-          $( "#content" ).prepend( `<a href="https://capitolraid.org/blog/?p=${entries.json[i]}" id="aL_${itemNumber}"></a>` )
-          $( `#aL_${itemNumber}` ).append( `<div class="post" id="dP_${itemNumber}"></div>` )
+
+
+          // $( "#content" ).prepend( `<a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${itemNumber}"></a>` )
+          // $( `#aL_${itemNumber}` ).append( `<div class="post" id="dP_${itemNumber}"></div>` )
           $.getJSON( "https://capitolraid.org/blog/posts/"+entries.json[i], function( data ) {
-            $( `#dP_${itemNumber}` ).append( `<img id="thumbnail" id="pThumb_${itemNumber}" src="posts/${data.thumbnailURL}">` )
-            $( `#dP_${itemNumber}` ).append( `<p id="author" id="pAuth_${itemNumber}">Post by ${data.author}</p>` )
-            $( `#dP_${itemNumber}` ).append( `<p id="title" id="pTitle_${itemNumber}">${data.title}</p>` )
-            $( `#dP_${itemNumber}` ).append( `<p id="desc" id="pDesc_${itemNumber}">${data.desc}</p>` )
-            $( `#dP_${itemNumber}` ).append( `<p id="about" id="pAbout_${itemNumber}">Posted ${data.dateCreated}</p>` )
+            postElements[i] = `
+              <a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${i}">
+                <div class="post" id="dP_${i}">
+                  <img id="thumbnail" id="pThumb_${i}" src="posts/${data.thumbnailURL}">
+                  <p id="author" id="pAuth_${i}">Post by ${data.author}</p>
+                  <p id="title" id="pTitle_${i}">${data.title}</p>
+                  <p id="desc" id="pDesc_${i}">${data.desc}</p>
+                  <p id="about" id="pAbout_${i}">Posted ${data.dateCreated}</p>
+                </div>
+              </a>
+            `
+            $( "#content" ).prepend( postElements[i] )
+
+            // $( `#dP_${itemNumber}` ).append( `<img id="thumbnail" id="pThumb_${itemNumber}" src="posts/${data.thumbnailURL}">` )
+            // $( `#dP_${itemNumber}` ).append( `<p id="author" id="pAuth_${itemNumber}">Post by ${data.author}</p>` )
+            // $( `#dP_${itemNumber}` ).append( `<p id="title" id="pTitle_${itemNumber}">${data.title}</p>` )
+            // $( `#dP_${itemNumber}` ).append( `<p id="desc" id="pDesc_${itemNumber}">${data.desc}</p>` )
+            // $( `#dP_${itemNumber}` ).append( `<p id="about" id="pAbout_${itemNumber}">Posted ${data.dateCreated}</p>` )
           })
         }
 
 
+
       })
+
+
 
       $( "#content" ).append( `<div class="fakePost">More posts to come!</div>` )
     }
