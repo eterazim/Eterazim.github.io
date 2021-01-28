@@ -120,17 +120,30 @@
           // $( "#content" ).prepend( `<a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${itemNumber}"></a>` )
           // $( `#aL_${itemNumber}` ).append( `<div class="post" id="dP_${itemNumber}"></div>` )
           $.getJSON( "https://capitolraid.org/blog/posts/"+entries.json[i], function( data ) {
-            postElements[i] = `
-              <a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${i}">
-                <div class="post" id="dP_${i}">
-                  <img id="thumbnail" id="pThumb_${i}" src="posts/${data.thumbnailURL}">
-                  <p id="author" id="pAuth_${i}">Post by ${data.author}</p>
-                  <p id="title" id="pTitle_${i}">${data.title}</p>
-                  <p id="desc" id="pDesc_${i}">${data.desc}</p>
-                  <p id="about" id="pAbout_${i}">Posted ${data.dateCreated}</p>
-                </div>
-              </a>
-            `
+            if (data.thumbnailURL!=undefined) {
+              postElements[i] = `
+                <a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${i}">
+                  <div class="post" id="dP_${i}">
+                    <img id="thumbnail" id="pThumb_${i}" src="posts/${data.thumbnailURL}">
+                    <p id="author" id="pAuth_${i}">Post by ${data.author}</p>
+                    <p id="title" id="pTitle_${i}">${data.title}</p>
+                    <p id="desc" id="pDesc_${i}">${data.desc}</p>
+                    <p id="about" id="pAbout_${i}">Posted ${data.dateCreated}</p>
+                  </div>
+                </a>
+              `
+            }else{
+              postElements[i] = `
+                <a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${i}">
+                  <div class="post" id="dP_${i}">
+                    <p id="author" id="pAuth_${i}">Post by ${data.author}</p>
+                    <p id="title" id="pTitle_${i}">${data.title}</p>
+                    <p id="desc" id="pDesc_${i}">${data.desc}</p>
+                    <p id="about" id="pAbout_${i}">Posted ${data.dateCreated}</p>
+                  </div>
+                </a>
+              `
+            }
             $( "#content" ).prepend( postElements[i] )
 
             // $( `#dP_${itemNumber}` ).append( `<img id="thumbnail" id="pThumb_${itemNumber}" src="posts/${data.thumbnailURL}">` )
