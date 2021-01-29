@@ -96,7 +96,7 @@
     const jsonfile = urlParams.get('p')
 
     if (jsonfile!=null&&jsonfile!=undefined) { // individual article code
-      $.getJSON( "73.208.230.151:3000/post/"+fileName(jsonfile).name, function( data ) {
+      $.getJSON( "localhost:3000/post/"+fileName(jsonfile).name, function( data ) {
         //console.log(data)
 
         if(data.author!=undefined) {
@@ -124,7 +124,7 @@
       let postElements = [];
 
       //"posts/"+postEntries
-      $.getJSON( "73.208.230.151:3000/posts", function( data ) {
+      $.getJSON( "localhost:3000/posts", function( data ) {
         //console.log(data)
         let entries = data
 
@@ -134,7 +134,7 @@
 
           // $( "#content" ).prepend( `<a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${itemNumber}"></a>` )
           // $( `#aL_${itemNumber}` ).append( `<div class="post" id="dP_${itemNumber}"></div>` )
-          $.getJSON( "73.208.230.151:3000/post/"+fileName(entries.json[i]).name, function( data ) {
+          $.getJSON( "localhost:3000/post/"+fileName(entries.json[i]).name, function( data ) {
             if (data.thumbnailURL!=undefined) {
               postElements[i] = `
                 <a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${i}">
