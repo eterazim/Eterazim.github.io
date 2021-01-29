@@ -65,6 +65,7 @@
 
   <script>
 
+    let serverURL = "http://localhost:3000"
 
     function fileName(input) {
       var name = input.substr(0, input.lastIndexOf('.')) || input
@@ -96,7 +97,7 @@
     const jsonfile = urlParams.get('p')
 
     if (jsonfile!=null&&jsonfile!=undefined) { // individual article code
-      $.getJSON( "http://localhost:3000/post/"+fileName(jsonfile).name, function( data ) {
+      $.getJSON( serverURL+"/post/"+fileName(jsonfile).name, function( data ) {
         //console.log(data)
 
         if(data.author!=undefined) {
@@ -113,7 +114,7 @@
           document.getElementById("text").innerHTML = text.replace(new RegExp('\r?\n','g'), '<br>');
         }
         if(data.thumbnailURL!=undefined) {
-          document.getElementById("thumbnail").src = "posts/"+data.thumbnailURL
+          document.getElementById("thumbnail").src = serverURL+"/upload/"+data.thumbnailURL
         }
 
       })
@@ -124,7 +125,7 @@
       let postElements = [];
 
       //"posts/"+postEntries
-      $.getJSON( "http://localhost:3000/posts", function( data ) {
+      $.getJSON( serverURL+"/posts", function( data ) {
         //console.log(data)
         let entries = data
 
@@ -134,12 +135,12 @@
 
           // $( "#content" ).prepend( `<a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${itemNumber}"></a>` )
           // $( `#aL_${itemNumber}` ).append( `<div class="post" id="dP_${itemNumber}"></div>` )
-          $.getJSON( "http://localhost:3000/post/"+fileName(entries.json[i]).name, function( data ) {
+          $.getJSON( serverURL+"/post/"+fileName(entries.json[i]).name, function( data ) {
             if (data.thumbnailURL!=undefined) {
               postElements[i] = `
                 <a href="${url.split('?')[0]}?p=${entries.json[i]}" id="aL_${i}">
                   <div class="post" id="dP_${i}">
-                    <img id="thumbnail" id="pThumb_${i}" src="73.208.230.151:3000/upload/${data.thumbnailURL}">
+                    <img id="thumbnail" id="pThumb_${i}" src="${serverURL}/upload/${data.thumbnailURL}">
                     <p id="author" id="pAuth_${i}">Post by ${data.author}</p>
                     <p id="title" id="pTitle_${i}">${data.title}</p>
                     <p id="desc" id="pDesc_${i}">${data.desc}</p>
@@ -173,9 +174,8 @@
 
       })
 
+      $( "#content" ).prepend( `<div class="fakePost">More posts to come!</div>` )
 
-
-      $( "#content" ).append( `<div class="fakePost">More posts to come!</div>` )
     }
 
   </script>
