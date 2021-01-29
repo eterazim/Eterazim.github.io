@@ -183,3 +183,17 @@ p {
   color: black;
   font-size: 12px;
 }
+
+#makePost {
+  background-color: white;
+  color: black;
+  padding: 6px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow: auto;
+  border: 0px solid rgba(38, 130, 34, 1);
+}
+#makePost #small {
+  color: black;
+  font-size: 12px;
+}

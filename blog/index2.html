@@ -40,6 +40,22 @@
 
   <div id="content">
     <!-- CONTENT HERE -->
+    <div id="makePost">
+      <p>Make a post!</p>
+      <form id="postForm" action="http://localhost:3000/post" method="post" enctype="multipart/form-data">
+       <label for="inputTitle">Title:</label>
+       <input type="text" id="inputTitle" name="title" required><br>
+       <label for="inputAuthor">Name:</label>
+       <input type="text" id="inputAuthor" name="author" required><br>
+       <label for="inputContent">Post text:</label>
+       <input type="text" id="inputContent" name="content" required><br>
+       <label for="inputDesc">Short summary:</label>
+       <input type="text" id="inputDesc" name="desc" required><br>
+       <label for="img">Select image:</label>
+       <input type="file" id="img" name="upload" accept="image/*"><br>
+       <input type="submit" value="Submit">
+      </form>
+    </div>
 
     <div class="postView">
       <p id="author">Author</p>
@@ -64,7 +80,6 @@
   </div>
 
   <script>
-
     let serverURL = "http://localhost:3000"
 
     function fileName(input) {
@@ -162,6 +177,8 @@
             }
             $( "#content" ).prepend( postElements[i] )
 
+            $( "#content" ).prepend( $( "#makePost" ) );
+
             // $( `#dP_${itemNumber}` ).append( `<img id="thumbnail" id="pThumb_${itemNumber}" src="posts/${data.thumbnailURL}">` )
             // $( `#dP_${itemNumber}` ).append( `<p id="author" id="pAuth_${itemNumber}">Post by ${data.author}</p>` )
             // $( `#dP_${itemNumber}` ).append( `<p id="title" id="pTitle_${itemNumber}">${data.title}</p>` )
@@ -174,7 +191,6 @@
 
       })
 
-      $( "#content" ).prepend( `<div class="fakePost">More posts to come!</div>` )
 
     }
 
