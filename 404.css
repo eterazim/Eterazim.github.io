@@ -1,0 +1,22 @@
+@keyframes rotation {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+#rotate {
+  animation: rotation 1s infinite linear;
+  color: green;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  bottom: -150px;
+}
+#404 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
