@@ -16,7 +16,32 @@
 }
 #404 {
   display: block;
+  color: yellow;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+#cube {
+  animation: rotation 1s infinite linear;
+  color: green;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  bottom: -250px;
+  left: 300px;
+  background-color: green;
+  height: 100px;
+  width: 100px;
+}
+#cube1 {
+  animation: rotation 1s infinite linear;
+  color: green;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  right: 300px;
+  bottom: -150px;
+  background-color: green;
+  height: 100px;
+  width: 100px;
 }
