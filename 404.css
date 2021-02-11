@@ -2,10 +2,12 @@
   0% {
     transform: rotateZ(0);
   }
+
   100% {
     transform: rotateZ(360deg);
   }
 }
+
 #rotate {
   animation: rotation 1s infinite linear;
   color: green;
@@ -14,6 +16,7 @@
   position: relative;
   bottom: -150px;
 }
+
 #404 {
   display: block;
   color: yellow;
@@ -21,6 +24,7 @@
   margin-right: auto;
   width: 50%;
 }
+
 #cube {
   animation: rotation 1s infinite linear;
   color: green;
@@ -33,6 +37,7 @@
   height: 100px;
   width: 100px;
 }
+
 #cube1 {
   animation: rotation 1s infinite linear;
   color: green;
