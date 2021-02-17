@@ -15,7 +15,7 @@
   position: relative;
   bottom: -150px;
 }
-#bible {
+#a {
   animation: rotation 5s infinite linear;
   display: block;
   margin-right: auto;
