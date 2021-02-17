@@ -1,0 +1,31 @@
+@keyframes rotation {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+#header {
+  animation: rotation 5s infinite linear;
+  color: green;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  bottom: -150px;
+}
+#bible {
+  animation: rotation 5s infinite linear;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+#easteregg {
+  animation: rotation 5s infinite linear;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  postion: relative;
+}
