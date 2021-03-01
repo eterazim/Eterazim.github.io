@@ -198,7 +198,7 @@ p {
   font-size: 12px;
 }
 @font-face {
-  font-family: Among_us.ttf;
+  font-family: among_us;
   src: url(Among_us.ttf);
   font-weight: regular;
 }
