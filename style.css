@@ -197,3 +197,10 @@ p {
   color: black;
   font-size: 12px;
 }
+@font-face {
+  font-family: Among_us.ttf;
+}
+
+div {
+  font-family: Among_us.ttf;
+}
