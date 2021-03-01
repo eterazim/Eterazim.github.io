@@ -46,18 +46,18 @@ body {
 }
 #headerContent {
   background: white;
-  font-family: 'Crete Round';
+  font-family: 'among_us';
   width: calc(100% - 20px);
   padding: 10px;
 }
 #headerContent #siteTitle {
-  font-family: 'Crete Round';
+  font-family: 'among_us';
   color: rgb(38, 130, 34);
   font-size: 30px;
   line-height: 35px;
 }
 #headerContent #siteMotto {
-  font-family: 'Crete Round';
+  font-family: 'among_us';
   color: rgb(46, 46, 46);
 }
 #footer {
@@ -71,7 +71,7 @@ body {
 #footerContent {
   background: white;
   color: rgb(46, 46, 46);
-  font-family: 'Crete Round';
+  font-family: 'among_us';
   width: calc(100% - 20px);
   padding: 10px;
 }
