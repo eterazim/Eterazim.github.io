@@ -1,5 +1,6 @@
 import random
 import time
+import cgitb cgitb.enable()
 while true:
   number = str(random.randrange(1, 11))
 
